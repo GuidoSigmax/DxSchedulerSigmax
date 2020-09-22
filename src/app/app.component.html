@@ -1,0 +1,25 @@
+<dx-scheduler
+  [currentView]="view"
+  [cellDuration]="cellDuration"
+  textExpr="summary"
+  maxAppointmentsPerCell="unlimited"
+  crossScrollingEnabled="true"
+  [groups]="['userID']"
+  [firstDayOfWeek]="1"
+  [(currentDate)]="currentDate"
+  [dataSource]="dataSource"
+  [resources]="resources"
+  [views]="schedulerViewsConfiguration"
+  timeZone="Europe/Amsterdam"
+  scrollToHour="8"
+  (onContentReady)="onContentReady($event)"
+>
+  <dxo-editing
+    #editingOptions
+    [allowAdding]="false"
+    [allowDeleting]="true"
+    [allowUpdating]="true"
+    [allowResizing]="true"
+    [allowDragging]="true"
+  ></dxo-editing>
+</dx-scheduler>
